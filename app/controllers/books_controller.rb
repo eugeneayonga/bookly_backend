@@ -15,6 +15,12 @@ class BooksController < ApplicationController
         render json: book, status: :created
     end
 
+    def update
+        book = Book.find_by(id: params[:id])
+        book.update(book_params)
+        render json: book, status: :ok
+    end
+
     private
 
     def book_params
