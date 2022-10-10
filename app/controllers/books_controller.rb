@@ -15,6 +15,14 @@ class BooksController < ApplicationController
         render json: book, status: :created
     end
 
+    # post "/books/:book_id/reviews", to: "reviews#create"
+    def create
+        book = Book.find_by(book_id: params[:book_id])
+        review = Review.create(review_params)
+        render json: review, status: :created
+    end
+
+
     def update
         book = Book.find_by(id: params[:id])
         book.update(book_params)
@@ -25,5 +33,9 @@ class BooksController < ApplicationController
 
     def book_params
         params.permit(:title, :author, :likes)
+    end
+
+    def review_params
+        params.permit(:title, :content, :likes)
     end
 end
