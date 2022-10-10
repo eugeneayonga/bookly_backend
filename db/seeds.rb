@@ -5,3 +5,29 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts "🌱 Seeding spices..."
+
+
+Book.create!([
+    {title: "The Great Gatsby", author: "F. Scott Fitzgerald", likes: 0},
+    {title: "The Catcher in the Rye", author: "J.D. Salinger", likes: 0},
+    {title: "The Grapes of Wrath", author: "John Steinbeck", likes: 0},
+    {title: "The Sun Also Rises", author: "Ernest Hemingway", likes: 0},
+    {title: "A Game of Thrones", author: "George R.R. Martin", likes: 0},
+    {title: "The Lord of the Rings", author: "J.R.R. Tolkien", likes: 0},
+    {title: "Zero to One", author: "Peter Thiel", likes: 0},
+    {title: "Steve Jobs", author: "Walter Isaacson", likes: 0},
+    {title: "The Lean Startup", author: "Eric Ries", likes: 0},
+    {title: "The Art of War", author: "Sun Tzu", likes: 0},
+    {title: "The Prince", author: "Niccolo Machiavelli", likes: 0},
+    {title: "The Art of the Deal", author: "Donald Trump", likes: 0},
+    {title: "The 48 Laws of Power", author: "Robert Greene", likes: 0},
+    {title: "Execution", author: "Larry Bossidy", likes: 0},
+    {title: "The 7 Habits of Highly Effective People", author: "Stephen Covey", likes: 0},
+    {title: "The 4-Hour Workweek", author: "Tim Ferriss", likes: 0},
+    {title: "The 4-Hour Body", author: "Tim Ferriss", likes: 0},
+    {title: "Bad Blood", author: "John Carreyrou", likes: 0},
+    {title: "The Hard Thing About Hard Things", author: "Ben Horowitz", likes: 0},
+    {title: "The Subtle Art of Not Giving a F*ck", author: "Mark Manson", likes: 0},
+])
