@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   get "/reviews/:id", to: "reviews#show"
   
   post "/books/:book_id/reviews", to: "reviews#create"
+
+  delete "/reviews/:id", to: "reviews#destroy"
   
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!
