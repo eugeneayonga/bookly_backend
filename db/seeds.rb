@@ -31,3 +31,13 @@ Book.create!([
     {title: "The Hard Thing About Hard Things", author: "Ben Horowitz", likes: 0},
     {title: "The Subtle Art of Not Giving a F*ck", author: "Mark Manson", likes: 0},
 ])
+
+
+all_reviews = ["This book is amazing!", "I love this book!", "This book is so good!", "I can't put this book down!", "This book is so interesting!", "This book is so boring!", "This book is so sad!", "This book is so funny!", "This book is so scary!", "This book is so weird!"]
+
+Book.all.each do |book|
+    Review.create!(text: all_reviews.sample, book_id: book.id)
+end
+
+
+puts "✅ Done seeding!"

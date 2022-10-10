@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   patch "/books/:id", to: "books#update"
 
   delete "/books/:id", to: "books#destroy"
+
+
+  get "/reviews", to: "reviews#index"
   
   
   # Routing logic: fallback requests for React Router.
