@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
 
   get "/reviews", to: "reviews#index"
+
+  get "/reviews/:id", to: "reviews#show"
   
   
   # Routing logic: fallback requests for React Router.
