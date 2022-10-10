@@ -29,6 +29,12 @@ class BooksController < ApplicationController
         render json: book, status: :ok
     end
 
+    def destroy
+        book = Book.find_by(id: params[:id])
+        book.destroy
+        head :no_content
+    end
+
     private
 
     def book_params
