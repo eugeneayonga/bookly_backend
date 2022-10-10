@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   post "/books", to: "books#create"
   
   patch "/books/:id", to: "books#update"
+
+  delete "/books/:id", to: "books#destroy"
   
   
   # Routing logic: fallback requests for React Router.
